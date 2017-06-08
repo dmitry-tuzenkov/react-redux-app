@@ -1,7 +1,7 @@
 {
   "account": {
-    "id": "dmitry@everad.com",
-    "email": "dmitry@everad.com",
+    "id": "dmitry@admail.com",
+    "email": "dmitry@admail.com",
     "roles": ["WH_MANAGER", "WH_WORKER"]
   },
 
