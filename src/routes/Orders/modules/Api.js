@@ -28,12 +28,12 @@ export function fetchOrderById (id) {
 }
 
 // TODO: Do we need this
-export function fetchOrderByBarcode (barcode) {
-  const options = { headers: defaultHeaders() }
-
-  return fetch(endpointApiUrl('/orders/barcode/' + barcode), options)
-    .then(response => response.json())
-}
+// export function fetchOrderByBarcode (barcode) {
+//   const options = { headers: defaultHeaders() }
+//
+//   return fetch(endpointApiUrl('/orders/barcode/' + barcode), options)
+//     .then(response => response.json())
+// }
 
 export function fetchOrderShipmentTypes () {
   const options = { headers: defaultHeaders() }

@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Button } from '../../../components/ui/button'
 import Table from '../../../components/ui/table'
-import FilterComponent from '../containers/FilterContainer'
+import ShipmentFilter from '../containers/ShipmentFilterContainer'
 
 const columns = [
   { Header: 'Id', accessor: 'id', width: 30 },
@@ -21,7 +21,7 @@ const options = {
 export const OrdersComponent = ({ fetchAll, orders }) => (
   <div>
     <h1> Orders </h1>
-    <FilterComponent />
+    <ShipmentFilter />
     <Table
       className='-striped -highlight'
       columns={columns}
