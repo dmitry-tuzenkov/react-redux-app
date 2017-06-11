@@ -11,7 +11,7 @@ const mapDispatchToProps = (dispatch) => ({
 
 const mapStateToProps = (state) => ({
   ordersQuery : state.ordersQuery,
-  shipmentTypes: state.ordersShipmentTypes,
+  shipmentTypes: state.orderShipmentTypes,
   shipmentTypeId: 1008999 || state.ordersQuery.shipmentTypeId,
 })
 
