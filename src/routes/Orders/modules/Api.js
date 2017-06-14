@@ -27,13 +27,9 @@ export function fetchOrderById (id) {
     .then(response => response.json())
 }
 
-// TODO: Do we need this
-// export function fetchOrderByBarcode (barcode) {
-//   const options = { headers: defaultHeaders() }
-//
-//   return fetch(endpointApiUrl('/orders/barcode/' + barcode), options)
-//     .then(response => response.json())
-// }
+export function fetchOrderByBarcode (barcode) {
+  return fetchOrdersByQuery({ barcode })
+}
 
 export function fetchOrderShipmentTypes () {
   const options = { headers: defaultHeaders() }

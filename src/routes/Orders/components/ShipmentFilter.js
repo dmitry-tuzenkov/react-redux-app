@@ -1,13 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import CommonFilter from '../../../components/common/Filter'
-import { Button } from '../../../components/ui/button'
+// import { Button } from '../../../components/ui/button'
 
 export const ShipmentFilter = ({ shipmentType, shipmentTypes, onChange }) => {
   return (
     <div>
-      <CommonFilter list={shipmentTypes} value={shipmentType} onChange={onChange} />
-      <Button onClick={onChange} label='(onChange)' />
+      <CommonFilter name='shipmentType' list={shipmentTypes} value={shipmentType} onChange={onChange} />
     </div>
   )
 }

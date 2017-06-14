@@ -7,9 +7,13 @@ export const ordersState = []
 
 export function fetchAllAction () {
   return (dispatch, getState) => {
-    dispatch({ type: ORDER_FETCH_ALL_REQUEST })
+    const query = {
+      offerId: getState().ordersQueryOfferType,
+      shipmentId: getState().ordersQueryShipmentType
+    }
 
-    return fetchOrdersByQuery(getState().query)
+    dispatch({ type: ORDER_FETCH_ALL_REQUEST })
+    return fetchOrdersByQuery(query)
       .then(json => dispatch({ type: ORDER_FETCH_ALL_COMPLETED, payload: json }))
       .catch(cause => dispatch({ type: ORDER_FETCH_ALL_FAILED, error: cause }))
   }

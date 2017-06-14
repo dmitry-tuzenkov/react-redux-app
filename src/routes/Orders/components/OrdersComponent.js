@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { Button } from '../../../components/ui/button'
 import Table from '../../../components/ui/table'
 import ShipmentFilter from '../containers/ShipmentFilterContainer'
+import OfferFilter from '../containers/OfferFilterContainer'
 
 const columns = [
   { Header: 'Id', accessor: 'id', width: 30 },
@@ -22,12 +23,13 @@ export const OrdersComponent = ({ fetchAll, orders }) => (
   <div>
     <h1> Orders </h1>
     <ShipmentFilter />
+    <OfferFilter />
+    <Button onClick={fetchAll} label='- Fetch All Orders By Filter -' />
     <Table
       className='-striped -highlight'
       columns={columns}
       data={orders}
       {...options} />
-    <Button onClick={fetchAll} label='fetchAll' />
   </div>
 )
 

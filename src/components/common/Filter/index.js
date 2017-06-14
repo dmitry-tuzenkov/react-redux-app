@@ -1,12 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export const FilterComponent = ({ value, list, onChange }) => {
+export const FilterComponent = ({ name, value, list, onChange }) => {
   const onClick = (e) => onChange(e.target.value)
 
   return (
     <div>
-      <select name='' value={value} onChange={onClick}>
+      <select name={name} value={value} onChange={onClick}>
         { list.map((item) => render(item)) }
       </select>
     </div>
@@ -14,9 +14,10 @@ export const FilterComponent = ({ value, list, onChange }) => {
 }
 
 FilterComponent.propTypes = {
-  onChange: PropTypes.func,
-  value: PropTypes.number,
-  list: PropTypes.array
+  onChange: PropTypes.func.isRequired,
+  value: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  list: PropTypes.array.isRequired
 }
 
 function render (item) {
